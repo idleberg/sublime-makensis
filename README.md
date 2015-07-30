@@ -15,7 +15,7 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 ### GitHub
 
 1. Change to your Sublime Text `Packages` directory
-2. Clone repository `git clone https://github.com/idleberg/sublime-makensis.git`
+2. Clone repository `git clone https://github.com/idleberg/sublime-makensis.git makensis`
 
 ## Donate
 
