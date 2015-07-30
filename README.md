@@ -1,9 +1,5 @@
 # sublime-makensis
 
-[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/github/release/idleberg/sublime-makensis.svg?style=flat-square)](https://github.com/idleberg/sublime-makensis/releases)
-[![Travis](https://img.shields.io/travis/idleberg/sublime-makensis.svg?style=flat-square)](https://travis-ci.org/idleberg/sublime-makensis)
-
 Improved [Sublime Text](http://www.sublimetext.com/) build system to compile NSIS scripts, supporting Windows, Mac OS X and Linux.
 
 ## Installation
