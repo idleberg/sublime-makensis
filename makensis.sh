@@ -43,12 +43,12 @@ command -v wine >/dev/null 2>&1 || {
 }
 
 # Get Program Files path via Wine command prompt
-PROGRAMFILES=$(wine cmd /c 'echo %PROGRAMFILES%' 2>/dev/null)
+PROGRAMS_WIN=$(wine cmd /c 'echo %PROGRAMFILES%' 2>/dev/null)
 
 # Translate windows path to absolute unix path
-PF_DIR=$(winepath -u "${PROGRAMFILES}" 2>/dev/null)
+PROGRAMS_UNIX=$(winepath -u "${PROGRAMS_WIN}" 2>/dev/null)
 
 # Get makensis path
-MAKENSIS=$(printf %q "${PF_DIR%?}/NSIS/makensis.exe")
+MAKENSIS=$(printf %q "${PROGRAMS_UNIX%?}/NSIS/makensis.exe")
 
 eval wine $MAKENSIS -- $@
