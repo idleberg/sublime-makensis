@@ -19,7 +19,7 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 ## Usage
 
-On Unix systems, you might have to `chmod +x makensis.sh` before you can build. When using the [NSIS](https://github.com/SublimeText/NSIS) package, you will have to switch the default build system to makensis before you can build with the default shortcut <kbd>Cmd</kbd>+<kbd>b</kbd>.
+On Unix systems, you might have to `chmod +x makensis.sh` before you can build. When using the [NSIS](https://github.com/SublimeText/NSIS) package, you will have to switch the default build system to *“makensis”* before you can build with the default shortcut <kbd>Cmd</kbd>+<kbd>b</kbd>.
 
 ## Donate
 
