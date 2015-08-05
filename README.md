@@ -21,8 +21,10 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 On Unix systems, you might have to make the build script executable:
 
-    # cd to Sublime Text/Packages/makensis
-    chmod +x makensis.sh
+```bash
+# cd to Sublime Text/Packages/makensis
+chmod +x makensis.sh
+```
 
 When using the NSIS package, you will have to switch the default build system
 
