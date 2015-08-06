@@ -30,7 +30,7 @@ When using the NSIS package, you will have to switch the default build system
 
     Tools > Build Systems > makensis
 
-Use the default shortcut <kbd>Cmd</kbd>+<kbd>b</kbd> to build scripts.
+Use the default shortcut <kbd>Super</kbd>+<kbd>b</kbd> to build scripts.
 
 ## Donate
 
