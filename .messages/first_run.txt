@@ -6,4 +6,4 @@ When using the NSIS package, you will have to switch the default build system
 
     Tools > Build Systems > makensis
 
-Use the default shortcut Cmd+b to build scripts.
+Use the default shortcut Super+b to build scripts.
