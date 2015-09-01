@@ -26,7 +26,7 @@ On Unix systems, you might have to make the build script executable:
 chmod +x makensis.sh
 ```
 
-When using the NSIS package, you will have to switch the default build system
+When using the [NSIS](https://github.com/SublimeText/NSIS) package, you will have to switch the default build system
 
     Tools > Build Systems > makensis
 
