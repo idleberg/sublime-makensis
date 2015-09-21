@@ -10,8 +10,8 @@
 #
 # Installing makensis on your distribution is easy, and works -in most cases-
 # through the default package manager (e.g. apt-get, brew, yum). If you want
-# to use the Windows builds to compile scripts, install Wine and the NSIS
-# version of your choice.
+# to use the Windows build to compile scripts, install Wine and a NSIS version
+# of your choice.
 #
 # https://github.com/idleberg/sublime-makensis
 
