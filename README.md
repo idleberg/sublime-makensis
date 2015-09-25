@@ -24,18 +24,11 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 ## Usage
 
-On Unix systems, you might have to make the build script executable:
-
-```bash
-# cd to Sublime Text/Packages/makensis
-chmod +x makensis.sh
-```
-
 When using the [NSIS](https://github.com/SublimeText/NSIS) package, you will have to switch the default build system
 
     Tools > Build Systems > makensis
 
-Use the default shortcut <kbd>Super</kbd>+<kbd>b</kbd> to build scripts.
+Use the default shortcut <kbd>Super</kbd>+<kbd>b</kbd> to build scripts. Should you experience a *Permission denied* error, change the permissions of the Bash script: `chmod +x makensis`.
 
 ## License
 
