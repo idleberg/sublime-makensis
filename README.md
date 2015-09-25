@@ -11,7 +11,7 @@ Improved [Sublime Text](http://www.sublimetext.com/) build system to compile NSI
 
 ### Package Control
 
-1. Make sure you already have [Package Control](http://wbond.net/sublime_packages/package_control/) installed
+1. Make sure you already have [Package Control](https://packagecontrol.io/) installed
 2. Choose “*Install Package*” from the Command Palette (<kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd>)
 3. Type “*makensis*” and press <kbd>Enter</kbd>
 
