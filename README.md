@@ -28,7 +28,7 @@ When using the [NSIS](https://github.com/SublimeText/NSIS) package, you will hav
 
     Tools > Build Systems > makensis
 
-Use the default shortcut <kbd>Super</kbd>+<kbd>b</kbd> to build scripts. Should you experience a *Permission denied* error, change the permissions of the Bash script: `chmod +x makensis`.
+Use the default shortcut <kbd>Super</kbd>+<kbd>b</kbd> to build scripts. Should you experience a *Permission denied* error, change the permissions of the Bash script: `chmod +x makensis.sh`.
 
 ## License
 
