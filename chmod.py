@@ -7,7 +7,7 @@ p = 'makensis'
 
 # Array of files, relative to package directory
 files = [
-    'makensis.sh'
+    'build.sh'
 ]
 
 def plugin_loaded():
