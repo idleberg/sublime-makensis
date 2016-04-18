@@ -11,13 +11,14 @@ files = [
 ]
 
 def plugin_loaded():
+    from os.path import join
     from package_control import events
 
     if (events.install(p) or events.post_upgrade(p)) and os.name is 'posix' or 'mac':
         for file in files:
 
             # Concat full path
-            f = sublime.packages_path() + '/' + p + '/' + file
+            f = join(sublime.packages_path(), '/' + p + '/' + file)
 
             # Change permissions, if file exists
             if os.path.isfile(f):
