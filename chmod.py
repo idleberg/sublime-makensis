@@ -3,7 +3,7 @@
 import os, stat, sublime, sublime_plugin
 
 # Package name, must match directory name
-p = 'makensis'
+package = 'makensis'
 
 # Array of files, relative to package directory
 files = [
@@ -14,11 +14,11 @@ def plugin_loaded():
     from os.path import join
     from package_control import events
 
-    if (events.install(p) or events.post_upgrade(p)) and os.name is 'posix' or 'mac':
+    if (events.install(package) or events.post_upgrade(package)) and os.name is 'posix' or 'mac':
         for file in files:
 
             # Concat full path
-            f = join(sublime.packages_path(), '/' + p + '/' + file)
+            f = join(sublime.packages_path(), package + '/' + file)
 
             # Change permissions, if file exists
             if os.path.isfile(f):
