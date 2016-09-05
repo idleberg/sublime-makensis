@@ -2,22 +2,18 @@
   "cmd": ["sh", "$packages/makensis/build.sh", "$file"],
   "working_dir": "${project_path:${folder}}",
   "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
-  "selector" : "source.nsis",
-  
-  "windows":
+  "selector": "source.nsis",
+  "windows": {
+    "cmd": ["$packages\\makensis\\build.cmd", "$file"]
+  },
+  "variants": [
     {
-      "cmd": ["$packages\\makensis\\build.cmd", "$file"]
-    },
-  "variants":
-    [
-      {
-        "name": "Strict",
-        "cmd": ["sh", "$packages/makensis/build.sh", "-WX", "$file"],
-        "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
-        "windows":
-        {
-          "cmd": ["$packages\\makensis\\build.cmd", "/WX", "$file"]
-        },
+      "name": "Strict",
+      "cmd": ["sh", "$packages/makensis/build.sh", "-WX", "$file"],
+      "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
+      "windows": {
+        "cmd": ["$packages\\makensis\\build.cmd", "/WX", "$file"]
       }
-    ]
+    }
+  ]
 }
