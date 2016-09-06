@@ -1,17 +1,10 @@
 #!/bin/bash
 
-# sublime-makensis
-#
 # The MIT License (MIT)
-# Copyright (c) 2015 Jan T. Sott, Derek Willian Stavis
+# Copyright (c) 2015, 2016 Jan T. Sott
 #
-# This script builds NSIS scripts on non-Windows platforms (Mac OS X, Linux)
-# using native makensis or through Wine
-#
-# Installing makensis on your distribution is easy, and works -in most cases-
-# through the default package manager (e.g. apt-get, brew, yum). If you want
-# to use the Windows build to compile scripts, install Wine and a NSIS version
-# of your choice.
+# This script builds NSIS scripts on non-Windows platforms (e.g. macOS, Linux)
+# using native makensis
 #
 # https://github.com/idleberg/sublime-makensis
 
@@ -26,7 +19,7 @@ then
 fi
 
 # Native makensis
-if makensis -VERSION >/dev/null
+if makensis -VERSION >/dev/null 
 then
     makensis "$@"
 
@@ -34,26 +27,6 @@ then
     then
         exit 0
     fi
-
-# Wine fallback (via https://gist.github.com/derekstavis/8288379)
 else
-    echo
-    echo "Trying to use Wine fallback"
-
-    # Let' try Wine then
-    command -v wine >/dev/null 2>&1 || {
-      echo >&2 "Error: Wine not found"
-      exit 127
-    }
-
-    # Get Program Files path via Wine command prompt
-    PROGRAMS_WIN=$(wine cmd /c 'echo %PROGRAMFILES%' 2>/dev/null)
-
-    # Translate windows path to absolute unix path
-    PROGRAMS_UNIX=$(winepath -u "${PROGRAMS_WIN}" 2>/dev/null)
-
-    # Get makensis path
-    MAKENSIS=$(printf %q "${PROGRAMS_UNIX%?}/NSIS/makensis.exe")
-
-    eval wine $MAKENSIS -- $@
+    echo "Error: makensis isn't in your PATH environment variable."
 fi
