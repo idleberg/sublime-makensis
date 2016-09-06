@@ -1,8 +1,0 @@
-When using the NSIS package, you will have to switch the default build system
-
-    Tools > Build Systems > makensis
-
-Use the default shortcut Super+b to build scripts. Should you experience a
-”Permission denied” error, change the permissions of the Bash script:
-
-    `chmod +x makensis.sh`
