@@ -6,7 +6,7 @@
 [![Travis CI](https://img.shields.io/travis/idleberg/sublime-makensis.svg?style=flat-square)](https://travis-ci.org/idleberg/sublime-makensis)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/SublimeText)
 
-Improved [Sublime Text](http://www.sublimetext.com/) build system to compile NSIS scripts, supporting Windows, Mac OS X and Linux.
+Improved [Sublime Text](http://www.sublimetext.com/) build system to compile NSIS scripts, supporting Windows, macOS and Linux.
 
 ## Installation
 
@@ -31,6 +31,16 @@ When using the [NSIS](https://github.com/SublimeText/NSIS) package, you will hav
 
 Use the default shortcut <kbd>Super</kbd>+<kbd>b</kbd> to build scripts or <kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>b</kbd> to choose a build variant.
 
+Available variants:
+
+* makensis
+* makensis - strict¹
+* makensis - Wine²
+* makensis - Wine, strict¹ ²
+
+¹⁾ treats warnings as errors  
+²⁾ requires [Wine](https://www.winehq.org/)  
+
 ## License
 
 This work is licensed under the [The MIT License](LICENSE).
@@ -38,3 +48,4 @@ This work is licensed under the [The MIT License](LICENSE).
 ## Donate
 
 You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/sublime-makensis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
+kJktRd`
