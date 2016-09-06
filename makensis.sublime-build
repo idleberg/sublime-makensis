@@ -8,11 +8,27 @@
   },
   "variants": [
     {
-      "name": "Strict",
+      "name": "strict",
       "cmd": ["sh", "$packages/makensis/build.sh", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["$packages\\makensis\\build.cmd", "/WX", "$file"]
+      }
+    },
+    {
+      "name": "Wine",
+      "cmd": ["sh", "$packages/makensis/build-wine.sh", "$file"],
+      "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
+      "windows": {
+        "cmd": ["echo", "This build system is not available on Windows"]
+      }
+    },
+    {
+      "name": "Wine, strict",
+      "cmd": ["sh", "$packages/makensis/build-wine.sh", "-WX", "$file"],
+      "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
+      "windows": {
+        "cmd": ["echo", "This build system is not available on Windows"]
       }
     }
   ]
