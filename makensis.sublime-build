@@ -1,23 +1,23 @@
 {
-  "cmd": ["sh", "$packages/makensis/build.sh", "$file"],
+  "cmd": ["sh", "$packages/makensis/scripts/build.sh", "$file"],
   "working_dir": "${project_path:${folder}}",
   "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
   "selector": "source.nsis",
   "windows": {
-    "cmd": ["$packages\\makensis\\build.cmd", "$file"]
+    "cmd": ["$packages\\makensis\\scripts\\build.cmd", "$file"]
   },
   "variants": [
     {
       "name": "strict",
-      "cmd": ["sh", "$packages/makensis/build.sh", "-WX", "$file"],
+      "cmd": ["sh", "$packages/makensis/scripts/build.sh", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
-        "cmd": ["$packages\\makensis\\build.cmd", "/WX", "$file"]
+        "cmd": ["$packages\\makensis\\scripts\\build.cmd", "/WX", "$file"]
       }
     },
     {
       "name": "Wine",
-      "cmd": ["sh", "$packages/makensis/build-wine.sh", "$file"],
+      "cmd": ["sh", "$packages/makensis/scripts/build-wine.sh", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["echo", "This build system is not available on Windows"]
@@ -25,7 +25,7 @@
     },
     {
       "name": "Wine, strict",
-      "cmd": ["sh", "$packages/makensis/build-wine.sh", "-WX", "$file"],
+      "cmd": ["sh", "$packages/makensis/scripts/build-wine.sh", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["echo", "This build system is not available on Windows"]
