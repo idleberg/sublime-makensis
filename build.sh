@@ -26,7 +26,7 @@ then
 fi
 
 # Native makensis
-if makensis -VERSION >/dev/null 
+if makensis -VERSION >/dev/null
 then
     makensis "$@"
 
@@ -41,7 +41,7 @@ else
     echo "Trying to use Wine fallback"
 
     # Let' try Wine then
-    command -v wine >/dev/null 2>&1 || { 
+    command -v wine >/dev/null 2>&1 || {
       echo >&2 "Error: Wine not found"
       exit 127
     }
