@@ -38,7 +38,7 @@ Available variants:
 * makensis - Wine²
 * makensis - Wine, strict¹ ²
 
-¹⁾ treats warnings as errors  
+¹⁾ treats warnings as errors, requires NSIS 3  
 ²⁾ requires [Wine](https://www.winehq.org/)  
 
 ## License
