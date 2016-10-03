@@ -4,7 +4,7 @@
 [![Package Control](https://packagecontrol.herokuapp.com/downloads/makensis.svg?style=flat-square)](https://packagecontrol.io/packages/makensis)
 [![GitHub](https://img.shields.io/github/release/idleberg/sublime-makensis.svg?style=flat-square)](https://github.com/idleberg/sublime-makensis/releases)
 [![Travis CI](https://img.shields.io/travis/idleberg/sublime-makensis.svg?style=flat-square)](https://travis-ci.org/idleberg/sublime-makensis)
-[![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/SublimeText)
+[![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/SublimeText)
 
 Improved [Sublime Text](http://www.sublimetext.com/) build system to compile NSIS scripts, supporting Windows, macOS and Linux.
 
