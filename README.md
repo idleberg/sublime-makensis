@@ -6,7 +6,7 @@
 [![Travis CI](https://img.shields.io/travis/idleberg/sublime-makensis.svg?style=flat-square)](https://travis-ci.org/idleberg/sublime-makensis)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ed1965.svg?style=flat-square)](https://gitter.im/NSIS-Dev/SublimeText)
 
-Improved [Sublime Text](http://www.sublimetext.com/) build system to compile NSIS scripts, supporting Windows, macOS and Linux.
+Advanced [Sublime Text](http://www.sublimetext.com/) build system to compile NSIS scripts, supporting Windows, macOS and Linux.
 
 ## Installation
 
