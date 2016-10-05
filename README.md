@@ -25,7 +25,7 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 ## Usage
 
-When using the [NSIS](https://github.com/SublimeText/NSIS) package, you will have to switch the default build system
+When using the [NSIS package](https://github.com/SublimeText/NSIS), you will have to switch the default build system
 
     Tools > Build Systems > makensis
 
@@ -48,4 +48,3 @@ This work is licensed under the [The MIT License](LICENSE).
 ## Donate
 
 You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/sublime-makensis) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
-kJktRd`
