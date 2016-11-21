@@ -18,7 +18,7 @@
     {
       "name": "Wine",
       "cmd": ["sh", "$packages/makensis/scripts/build-wine.sh", "$file"],
-      "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
+      "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
       "windows": {
         "cmd": ["echo", "This build system is not available on Windows"]
       }
@@ -29,6 +29,22 @@
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["echo", "This build system is not available on Windows"]
+      }
+    },
+    {
+      "name": "PowerShell",
+      "cmd": ["echo", "This build system is only available on Windows"],
+      "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
+      "windows": {
+        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "$file"]
+      }
+    },
+    {
+      "name": "PowerShell, strict",
+      "cmd": ["echo", "This build system is only available on Windows"],
+      "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
+      "windows": {
+        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "/WX", "$file"]
       }
     }
   ]

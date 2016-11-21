@@ -18,7 +18,7 @@ Advanced [Sublime Text](http://www.sublimetext.com/) build system to compile NSI
 
 With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/) enabled, Package Control will keep all installed packages up-to-date!
 
-### GitHub
+### Using Git
 
 1. Change to your Sublime Text `Packages` directory
 2. Clone repository `git clone https://github.com/idleberg/sublime-makensis.git makensis`
@@ -37,6 +37,8 @@ Available variants:
 * makensis - strict¹
 * makensis - Wine²
 * makensis - Wine, strict¹ ²
+* makensis - PowerShell
+* makensis - PowerShell, stict¹
 
 ¹⁾ treats warnings as errors, requires NSIS 3  
 ²⁾ requires [Wine](https://www.winehq.org/)  
