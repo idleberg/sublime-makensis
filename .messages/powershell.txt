@@ -1,0 +1,12 @@
+PowerShell Build Script
+=======================
+
+With Microsoft slowly retiring the Windows Command Prompt in favour of
+PowerShell, this package now includes an option to build NSIS scripts using
+a PowerShell script. Over the course of the next months, or even years, this
+script is meant to become the default build option of Windows.
+
+If you run into any problems using this script, please report an issue on the
+GitHub repository:
+
+    https://github.com/idleberg/sublime-makensis
