@@ -38,7 +38,7 @@ Available variants:
 * makensis - Wine²
 * makensis - Wine, strict¹ ²
 * makensis - PowerShell
-* makensis - PowerShell, stict¹
+* makensis - PowerShell, strict¹
 
 ¹⁾ treats warnings as errors, requires NSIS 3  
 ²⁾ requires [Wine](https://www.winehq.org/)  
