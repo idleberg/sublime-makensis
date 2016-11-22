@@ -20,7 +20,7 @@
       "cmd": ["sh", "$packages/makensis/scripts/build-wine.sh", "$file"],
       "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
       "windows": {
-        "cmd": ["echo This build system is not available on Windows"],
+        "cmd": ["echo", "This build system is not available on Windows"],
         "shell": true
       }
     },
@@ -29,7 +29,7 @@
       "cmd": ["sh", "$packages/makensis/scripts/build-wine.sh", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
-        "cmd": ["echo This build system is not available on Windows"],
+        "cmd": ["echo", "This build system is not available on Windows"],
         "shell": true
       }
     },
@@ -38,7 +38,7 @@
       "cmd": ["bash", "-c", "echo This build system is only available on Windows"],
       "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
       "windows": {
-        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "$file"]
+        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "\"$file\""]
       }
     },
     {
@@ -46,7 +46,7 @@
       "cmd": ["bash", "-c", "echo This build system is only available on Windows"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
-        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "/WX", "$file"]
+        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "/WX", "\"$file\""]
       }
     }
   ]
