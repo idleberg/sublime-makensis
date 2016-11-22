@@ -11,7 +11,7 @@ if (!(Test-Path HKLM:)) {
 
 if ($PSVersionTable.PSVersion.Major -lt 3) {
     # PowerShell 3.0 is integrated with Windows 8 and with Windows Server 2012
-    Write-Host "Error: This script requires PowerShell 3 (or higher)"
+    Write-Host "Error: This script requires PowerShell 3.0 (or higher)"
     Exit
 }
 
