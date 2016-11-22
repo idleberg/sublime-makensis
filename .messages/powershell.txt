@@ -1,18 +1,10 @@
 PowerShell Build Script
 =======================
 
-With Microsoft slowly retiring the Windows Command Prompt in favour of
-PowerShell, this package now includes an option to build NSIS scripts using
-a PowerShell script. Over the course of the next months, or even years, this
-script is meant to become the default build option of Windows.
-
-    In an effort to bring the best command line experiences to the forefront
-    for all power users, PowerShell is now the defacto command shell from File
-    Explorer. It replaces Command Prompt (aka, “cmd.exe”) in the WIN + X menu,
-    in File Explorer’s File menu, and in the context menu that appears when you
-    shift-right-click the whitespace in File Explorer.
-
-    via Windows 10 Blog – http://bit.ly/2g0yfUk
+With Microsoft slowly retiring the Windows Command Prompt ("cmd.exe") in favour
+of PowerShell, this package now includes an option to build NSIS scripts using
+a PowerShell script. Over the course of the next months, if not years, this
+script is meant to become the new default build option of Windows.
 
 If you run into any problems using this script, please report an issue on the
 GitHub repository:
