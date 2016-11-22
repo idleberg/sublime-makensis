@@ -17,7 +17,7 @@ then
     SCRIPT=$@
 else
     ARGUMENTS="$1 --"
-    SCRIPT=$2
+    SCRIPT=\"$2\"
 fi
 
 echo "Detecting Wine"
@@ -43,4 +43,4 @@ MAKENSIS=$(printf %q "${PROGRAMS_UNIX%?}/NSIS/makensis.exe")
 
 echo "Running makensis.exe"
 echo
-eval wine $MAKENSIS $ARGUMENTS "$SCRIPT"
+eval wine $MAKENSIS $ARGUMENTS $SCRIPT
