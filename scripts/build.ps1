@@ -3,6 +3,8 @@
 #
 # https://github.com/idleberg/sublime-makensis
 
+$DebugPreference = "SilentlyContinue"
+
 If (-Not (Test-Path HKLM:)) {
     # This should never be shown when run from Sublime Text
     Write-Host "Error: This script is meant to be run on Windows only"
@@ -16,13 +18,13 @@ If ($PSVersionTable.PSVersion.Major -lt 3) {
 }
 
 If ((Test-Path env:NSIS_HOME) -And (Test-Path "${env:NSIS_HOME}\makensis.exe")) {
-    Write-Debug "Checking %NSIS_HOME% for makensis.exe"
+    Write-Debug "'makensis.exe' found in %NSIS_HOME% "
     $makensis = "${env:NSIS_HOME}\makensis.exe"
 } ElseIf (Get-Command "makensis.exe" -ErrorAction SilentlyContinue) {
-    Write-Debug "Checking %PATH% for makensis.exe"
+    Write-Debug "'makensis.exe' found in %PATH%"
     $makensis = "makensis.exe"
 } Else {
-    Write-Debug "Checking registry for NSIS"
+    Write-Debug "Checking registry for NSIS installation path"
     If ([System.Environment]::Is64BitOperatingSystem) {
         $nsis_key = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\NSIS'
     } Else {
@@ -34,7 +36,8 @@ If ((Test-Path env:NSIS_HOME) -And (Test-Path "${env:NSIS_HOME}\makensis.exe")) 
 }
 
 Try {
+    Write-Debug "Executing `"$makensis $args`""
     Start-Process -NoNewWindow -FilePath "$makensis" -ArgumentList "$args"
 } Catch [System.Management.Automation.CommandNotFoundException] {
-    Write-Host "Error: makensis.exe isn't in your PATH environment variable."
+    Write-Host "'makensis.exe' is not recognized as an internal or external command, operable program or batch file."
 }
