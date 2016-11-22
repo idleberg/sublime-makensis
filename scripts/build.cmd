@@ -31,5 +31,5 @@ if not "%~1"=="" goto loop
 if defined nsis_compiler (
     "%nsis_compiler%\makensis.exe" %args%
 ) else (
-    echo "Error: makensis.exe isn't in your PATH or NSIS_HOME environment variable."
+    echo "Error: makensis.exe isn't in your PATH environment variable."
 )
