@@ -14,10 +14,10 @@ PATH=/usr/bin:/usr/local/bin:/opt/local/bin:/bin:$PATH
 if [[ $1 != '-WX' ]]
 then
     ARGUMENTS="--"
-    SCRIPT=$@
+    SCRIPT=\"$@\"
 else
     ARGUMENTS="$1 --"
-    SCRIPT=\"$2\"
+    SCRIPT=\"${@:2}\"
 fi
 
 echo "Detecting Wine"
