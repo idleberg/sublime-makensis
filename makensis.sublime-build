@@ -1,5 +1,5 @@
 {
-  "cmd": ["sh", "$packages/makensis/scripts/build.sh", "$file"],
+  "cmd": ["makensis", "$file"],
   "working_dir": "${project_path:${folder}}",
   "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
   "selector": "source.nsis",
@@ -9,7 +9,7 @@
   "variants": [
     {
       "name": "strict",
-      "cmd": ["sh", "$packages/makensis/scripts/build.sh", "-WX", "$file"],
+      "cmd": ["makensis", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["$packages\\makensis\\scripts\\build.cmd", "/WX", "$file"]
