@@ -18,7 +18,7 @@ If ($PSVersionTable.PSVersion.Major -lt 3) {
 }
 
 If ((Test-Path env:NSIS_HOME) -And (Test-Path "${env:NSIS_HOME}\makensis.exe")) {
-    Write-Debug "'makensis.exe' found in %NSIS_HOME% "
+    Write-Debug "'makensis.exe' found in %NSIS_HOME%"
     $makensis = "${env:NSIS_HOME}\makensis.exe"
 } ElseIf (Get-Command "makensis.exe" -ErrorAction SilentlyContinue) {
     Write-Debug "'makensis.exe' found in %PATH%"
