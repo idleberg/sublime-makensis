@@ -32,9 +32,9 @@ If (Get-Command "makensis.exe" -ErrorAction SilentlyContinue) {
     $makensis = Join-Path -Path $nsis_path -ChildPath "makensis.exe"
 }
 
-Try {
+If (-Not $makensis) {
+    Write-Host "'makensis.exe' is not recognized as an internal or external command, operable program or batch file."
+} Else {
     Write-Debug "Executing `"$makensis $args`""
     Start-Process -NoNewWindow -FilePath "$makensis" -ArgumentList "$args"
-} Catch [System.Management.Automation.CommandNotFoundException] {
-    Write-Host "'makensis.exe' is not recognized as an internal or external command, operable program or batch file."
 }
