@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The MIT License (MIT)
-# Copyright (c) 2014-2016 Jan T. Sott, Derek Willian Stavis
+# Copyright (c) 2014-2017 Jan T. Sott, Derek Willian Stavis
 #
 # This script builds NSIS scripts using makensis on Wine
 #
