@@ -35,7 +35,7 @@
     },
     {
       "name": "Legacy Windows",
-      ["bash", "-c", "echo This build system is only available on Windows"],
+      "cmd": ["bash", "-c", "echo This build system is only available on Windows"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["$packages\\makensis\\scripts\\build.cmd", "$file"]
@@ -43,7 +43,7 @@
     },
     {
       "name": "Legacy Windows – strict",
-      ["bash", "-c", "echo This build system is only available on Windows"],
+      "cmd": ["bash", "-c", "echo This build system is only available on Windows"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
         "cmd": ["$packages\\makensis\\scripts\\build.cmd", "/WX", "$file"]
