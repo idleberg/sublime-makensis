@@ -33,15 +33,16 @@ Use the default shortcut <kbd>Super</kbd>+<kbd>b</kbd> to build scripts or <kbd>
 
 Available variants:
 
-* makensis
-* makensis - strict¹
-* makensis - Wine²
-* makensis - Wine, strict¹ ²
-* makensis - PowerShell
-* makensis - PowerShell, strict¹
+* makensis¹
+* makensis - strict¹ ²
+* makensis - Wine³
+* makensis - Wine, strict² ³
+* makensis - Legacy Windows
+* makensis - Legacy Windows, strict²
 
-¹⁾ treats warnings as errors, requires NSIS 3  
-²⁾ requires [Wine](https://www.winehq.org/)  
+¹⁾ requires PowerShell 3.0 (or higher)  
+²⁾ treats warnings as errors, requires NSIS 3  
+³⁾ requires [Wine](https://www.winehq.org/)  
 
 **Note:** Microsoft has [recently announced](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/) its plans to slowly deprecate `cmd.exe` in favour of PowerShell. In the long-term, the PowerShell build variants are meant to replace the old batch files. Until then, please report any [issues](https://github.com/idleberg/sublime-makensis/issues).
 
