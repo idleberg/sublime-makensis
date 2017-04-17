@@ -1,10 +1,10 @@
 {
   "cmd": ["makensis", "$file"],
+  "selector": "source.nsis",
   "working_dir": "${project_path:${folder}}",
   "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
-  "selector": "source.nsis",
   "windows": {
-    "cmd": ["$packages\\makensis\\scripts\\build.cmd", "$file"]
+    "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "\"$file\""]
   },
   "variants": [
     {
@@ -12,7 +12,7 @@
       "cmd": ["makensis", "-WX", "$file"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
-        "cmd": ["$packages\\makensis\\scripts\\build.cmd", "/WX", "$file"]
+        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "/WX", "\"$file\""]
       }
     },
     {
@@ -34,19 +34,19 @@
       }
     },
     {
-      "name": "PowerShell",
-      "cmd": ["bash", "-c", "echo This build system is only available on Windows"],
-      "file_regex": ".*rror in script:? \"(...*?)\" on line (\\d+)",
+      "name": "Legacy Windows",
+      ["bash", "-c", "echo This build system is only available on Windows"],
+      "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
-        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "\"$file\""]
+        "cmd": ["$packages\\makensis\\scripts\\build.cmd", "$file"]
       }
     },
     {
-      "name": "PowerShell, strict",
-      "cmd": ["bash", "-c", "echo This build system is only available on Windows"],
+      "name": "Legacy Windows – strict",
+      ["bash", "-c", "echo This build system is only available on Windows"],
       "file_regex": ".*arning: .* \\((...*?):(\\d+)\\)",
       "windows": {
-        "cmd": ["powershell", "-ExecutionPolicy", "Unrestricted", "-File", "$packages\\makensis\\scripts\\build.ps1", "/WX", "\"$file\""]
+        "cmd": ["$packages\\makensis\\scripts\\build.cmd", "/WX", "$file"]
       }
     }
   ]
