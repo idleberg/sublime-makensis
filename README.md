@@ -27,7 +27,7 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 ### Windows
 
-Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Make sure `makensis` is in your [PATH environmental variable][path].
+Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Make sure `makensis` is in your [PATH environmental variable](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them/284351#284351).
 
 Alternatively, you can install NSIS through [Chocolatey](https://chocolatey.org/packages/nsis):
 
