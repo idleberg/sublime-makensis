@@ -80,7 +80,7 @@ Available variants:
 ²⁾ treats warnings as errors, requires NSIS 3.0  
 ³⁾ requires [Wine](https://www.winehq.org/)  
 
-**Note:** Microsoft has [recently announced](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/) its plans to slowly deprecate `cmd.exe` in favour of PowerShell. In the long-term, the PowerShell build variants are meant to replace the old batch files. Until then, please report any [issues](https://github.com/idleberg/sublime-makensis/issues).
+**Note:** Microsoft has [announced](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/) its plans to slowly deprecate `cmd.exe` in favour of PowerShell. In the long-term, the PowerShell build variants are meant to replace the old batch files. Until then, please report any [issues](https://github.com/idleberg/sublime-makensis/issues).
 
 ## License
 
