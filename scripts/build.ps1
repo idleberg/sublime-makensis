@@ -28,7 +28,7 @@ If (Get-Command "makensis" -ErrorAction SilentlyContinue) {
 }
 
 If (-Not $makensis) {
-    Write-Host "'makensis.exe' is not recognized as an internal or external command, operable program or batch file."
+    Write-Host "'makensis' is not recognized as an internal or external command, operable program or batch file."
 } Else {
     Write-Debug "Executing `"$makensis $args`""
     Start-Process -NoNewWindow -FilePath "$makensis" -ArgumentList "$args"
