@@ -49,7 +49,7 @@ sudo dnf install nsis
 
 ### macOS
 
-Install NSIS using [Homebrew](http://brew.sh/) (recommended) or [MacPorts](https://www.macports.org/):
+Install NSIS using [Homebrew](http://brew.sh/) or [MacPorts](https://www.macports.org/):
 
 ``` bash
 # Homebrew
