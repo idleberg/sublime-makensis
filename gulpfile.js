@@ -2,7 +2,7 @@
  * sublimetext-gulpfile.js
  * https://github.com/idleberg/sublimetext-gulpfile.js
  *
- * Copyright (c) 2014-2017 Jan T. Sott
+ * Copyright (c) 2014-2018 Jan T. Sott
  * Licensed under the MIT license.
  */
 
@@ -82,6 +82,6 @@ gulp.task('lint:yml', (done) => {
 });
 
 // Available tasks
-gulp.task('lint', gulp.parallel('lint:json', 'lint:xml', 'lint:yml', (done) => {
+gulp.task('default', gulp.parallel('lint:json', 'lint:xml', 'lint:yml', (done) => {
   done();
 }));
