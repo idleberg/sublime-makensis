@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The MIT License (MIT)
-# Copyright (c) 2014-2017 Jan T. Sott, Derek Willian Stavis
+# Copyright (c) 2014-2018 Jan T. Sott, Derek Willian Stavis
 #
 # This script builds NSIS scripts using makensis on Wine
 #
@@ -23,7 +23,7 @@ fi
 echo "Detecting Wine"
 
 # Detect Wine then
-command -v wine >/dev/null 2>&1 || { 
+command -v wine >/dev/null 2>&1 || {
   echo >&2 "Error: Wine not found"
   exit 127
 }

@@ -1,5 +1,5 @@
 # The MIT License (MIT)
-# Copyright (c) 2016, 2017 Jan T. Sott
+# Copyright (c) 2016-2018 Jan T. Sott
 #
 # https://github.com/idleberg/sublime-makensis
 
