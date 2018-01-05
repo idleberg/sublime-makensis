@@ -1,12 +1,15 @@
 PowerShell Build Script
 =======================
 
-With Microsoft slowly retiring the Windows Command Prompt ("cmd.exe") in favour
-of PowerShell, this package now includes an option to build NSIS scripts using
-a PowerShell script. Over the course of the next months, if not years, this
-script is meant to become the new default build option of Windows.
+As of today (January 9th, 2018), Windows 8 has reached end of mainstream
+support. It has been the first Windows version to ship with PowerShell v3, the
+version required by this package's script to detect the NSIS installation path
+on Windows. Microsoft has announced in November 2016 to slowly deprecate the
+Windows Command Prompt in favour of PowerShell, so the new default build
+variant on Windows is now following that direction, replacing the old Batch
+script.
 
-If you run into any problems using this script, please report an issue on the
-GitHub repository:
+In all likelihood, building NSIS script will continue to work as it always has!
 
-    https://github.com/idleberg/sublime-makensis
+If you wish to continue using the old Batch script, for whatever reason, please
+select the “Legacy Windows” build variant from the Tools menu.
