@@ -24,7 +24,10 @@ If (Get-Command "makensis" -ErrorAction SilentlyContinue) {
     }
 
     $nsis_path = (Get-ItemProperty -Path $nsis_key -Name InstallLocation).InstallLocation
-    $makensis = Join-Path -Path $nsis_path -ChildPath "makensis.exe"
+
+    If (-Not ([string]::IsNullOrEmpty($nsis_path))) {
+        $makensis = Join-Path -Path $nsis_path -ChildPath "makensis.exe"
+    }
 }
 
 If (-Not $makensis) {
