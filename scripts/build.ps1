@@ -23,10 +23,10 @@ If (Get-Command "makensis" -ErrorAction SilentlyContinue) {
         $nsis_key = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\NSIS'
     }
 
-    $nsis_path = (Get-ItemProperty -Path $nsis_key -Name InstallLocation).InstallLocation
-
-    If (-Not ([string]::IsNullOrEmpty($nsis_path))) {
-        $makensis = Join-Path -Path $nsis_path -ChildPath "makensis.exe"
+    If (Get-ItemProperty -Path $nsis_key -Name InstallLocation) {
+        Write-Debug "'makensis' found in Windows Registry"
+        $install_location = (Get-ItemProperty -Path $nsis_key -Name InstallLocation).InstallLocation
+        $makensis = Join-Path -Path $install_location -ChildPath "makensis.exe"
     }
 }
 
