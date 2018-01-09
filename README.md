@@ -80,8 +80,6 @@ Available variants:
 ²⁾ treats warnings as errors, requires NSIS 3.0  
 ³⁾ requires [Wine](https://www.winehq.org/)  
 
-**Note:** Following Microsoft's [announcement](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/) to slowly deprecate the old Windows command prompt (`cmd.exe`), the default build variant is now using a PowerShell script to detect the NSIS installation path. If you wish to continue using the old Batch script, select the “Legacy Windows” build variant.
-
 ## License
 
 This work is licensed under the [The MIT License](LICENSE).

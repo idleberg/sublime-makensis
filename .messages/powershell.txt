@@ -1,6 +1,12 @@
 PowerShell Build Script
 =======================
 
+TL;DR
+
+The default build script has been changed, everything should continue to work.
+
+--
+
 As of today (January 9th, 2018), Windows 8 has reached end of mainstream
 support. It has been the first Windows version to ship with PowerShell v3, the
 version required by this package's script to detect the NSIS installation path
