@@ -4,6 +4,14 @@ rem Check %PATH% for makensis.exe
 for %%X in (makensis.exe) do (set nsis_path=%%~dp$PATH:X)
 if defined nsis_path goto :found
 
+rem Check %NSIS_HOME% for makensis.exe
+if defined NSIS_HOME (
+    if exist "%NSIS_HOME%\makensis.exe" (
+        set "nsis_path=%NSIS_HOME%"
+        goto found
+    )
+)
+
 rem Check registry for NSIS install path
 if %PROCESSOR_ARCHITECTURE%==x86 (
     set RegQry=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
@@ -11,7 +19,7 @@ if %PROCESSOR_ARCHITECTURE%==x86 (
     set RegQry=HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\NSIS
 )
 
-for /F "tokens=2*" %%a in ('reg query "%RegQry%" /v InstallLocation ^|findstr InstallLocation') do set nsis_path=%%b 
+for /F "tokens=2*" %%a in ('reg query "%RegQry%" /v InstallLocation ^|findstr InstallLocation') do set nsis_path=%%b
 
 :found
 set args=
