@@ -27,15 +27,13 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 ### Windows
 
-Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup.
+Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Once completed, you need to add the installation folder to your [environmental variable](http://superuser.com/a/284351/195953) manually.
 
-Alternatively, you can install NSIS through [Chocolatey](https://chocolatey.org/packages/nsis):
+Alternatively, you can install NSIS using the [Scoop](https://github.com/NSIS-Dev/scoop-nsis) package manager:
 
-``` bash
-choco install nsis
+```sh
+$ scoop install nsis/nsis
 ```
-
-**Note:** Make sure `makensis` is in your [PATH environmental variable](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them/284351#284351) or `NSIS_HOME`.
 
 ### Linux
 
@@ -78,9 +76,9 @@ Available variants:
 * makensis - Legacy Windows
 * makensis - Legacy Windows, strict²
 
-¹⁾ requires PowerShell 3.0 (Windows 8 or later)  
-²⁾ treats warnings as errors, requires NSIS 3.0  
-³⁾ requires [Wine](https://www.winehq.org/)  
+¹⁾ requires PowerShell 3.0 (Windows 8 or later)
+²⁾ treats warnings as errors, requires NSIS 3.0
+³⁾ requires [Wine](https://www.winehq.org/)
 
 ## License
 
