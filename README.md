@@ -76,9 +76,9 @@ Available variants:
 * makensis - Legacy Windows
 * makensis - Legacy Windows, strict²
 
-¹⁾ requires PowerShell 3.0 (Windows 8 or later)
-²⁾ treats warnings as errors, requires NSIS 3.0
-³⁾ requires [Wine](https://www.winehq.org/)
+¹⁾ requires PowerShell 3.0 (Windows 8 or later)  
+²⁾ treats warnings as errors, requires NSIS 3.0  
+³⁾ requires [Wine](https://www.winehq.org/)  
 
 ## License
 
