@@ -26,7 +26,7 @@ With [auto_upgrade](http://wbond.net/sublime_packages/package_control/settings/)
 
 ### Windows
 
-Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Once completed, you need to add the installation folder to your [environmental variable](http://superuser.com/a/284351/195953) manually.
+Download the NSIS installer from [SourceForge](https://sourceforge.net/p/nsis) and run setup. Once completed, you need to add the installation folder to your `PATH` [environmental variable](http://superuser.com/a/284351/195953) manually.
 
 Alternatively, you can install NSIS using the [Scoop](https://github.com/NSIS-Dev/scoop-nsis) package manager:
 
