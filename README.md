@@ -1,9 +1,8 @@
 # sublime-makensis
 
 ![License](https://img.shields.io/github/license/idleberg/sublime-makensis?style=for-the-badge)
-![Package Control Downloads](https://img.shields.io/packagecontrol/dt/makensis?style=for-the-badge)
 ![Release](https://img.shields.io/github/v/release/idleberg/sublime-makensis?style=for-the-badge)
-
+![Package Control Downloads](https://img.shields.io/packagecontrol/dt/makensis?style=for-the-badge)
 
 Advanced [Sublime Text](http://www.sublimetext.com/) build system to compile NSIS scripts, supporting Windows, macOS and Linux.
 
